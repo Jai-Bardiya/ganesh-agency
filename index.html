@@ -27,27 +27,20 @@
         .top-bar a { color: var(--accent); text-decoration: none; }
 
         /* Navigation Bar */
-        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        nav { background: white; padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
-        .logo-icon { font-size: 1.8rem; color: var(--primary); background: #e0f2fe; padding: 10px; border-radius: 50%; }
-        .logo-text h1 { font-size: 1.4rem; color: var(--dark); line-height: 1.2; }
-        .logo-text span { font-size: 0.8rem; color: #64748b; font-weight: 400; }
+        .logo-img { height: 50px; width: auto; border-radius: 50%; }
+        .logo-text h1 { font-size: 1.3rem; color: var(--dark); line-height: 1.2; }
+        .logo-text span { font-size: 0.75rem; color: #64748b; font-weight: 400; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         .nav-btn { background: var(--success); color: white !important; padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px; }
 
-        /* Hero Section */
-        header { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; text-align: center; padding: 5rem 1rem; position: relative; overflow: hidden; }
-        header h2 { font-size: 2.8rem; margin-bottom: 10px; color: white; font-weight: 700; }
-        header h2 span { color: var(--accent); }
-        header p { font-size: 1.2rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 25px; }
-        .hero-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
-        .btn-outline { border: 2px solid white; color: white; }
-        .btn-outline:hover { background: white; color: var(--dark); }
+        /* Video Header Section */
+        .video-container { background: var(--dark); padding: 2rem 1rem; text-align: center; }
+        .video-wrapper { max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 3px solid var(--accent); }
+        .video-wrapper video { width: 100%; display: block; }
 
         /* Main Container */
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
@@ -66,7 +59,7 @@
         .feature-card p { color: #64748b; font-size: 0.95rem; }
 
         /* Catalog Product Grid */
-        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 20px; }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
         .product-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); }
         .product-card-body { padding: 20px; }
@@ -83,10 +76,13 @@
         .contact-card p { font-size: 0.85rem; color: #64748b; margin: 0; }
         .contact-card h5 { font-size: 1rem; color: var(--dark); margin: 0; word-break: break-all; }
 
-        /* Interactive Quote Banner */
+        /* Call to Action Banner */
         .quote-section { background: linear-gradient(135deg, #e0f2fe, #bae6fd); padding: 40px; border-radius: 16px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
         .quote-content h4 { font-size: 1.8rem; color: #0369a1; margin-bottom: 10px; }
         .quote-content p { color: #334155; }
+        .btn { padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary { background: var(--success); color: white; }
+        .btn-primary:hover { background: #20ba5a; transform: translateY(-2px); }
 
         /* Footer */
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 30px 20px; margin-top: 60px; }
@@ -94,7 +90,6 @@
 
         @media(max-width: 768px) {
             .nav-links { display: none; }
-            header h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -102,17 +97,18 @@
 
     <!-- Top Notice Bar -->
     <div class="top-bar">
-        <div><i class="fa-solid fa-location-dot"></i> 3 Kadambariraj Park CTS No.1132, 1323, Pune 411033, Maharashtra</div>
+        <div><i class="fa-solid fa-location-dot"></i> 3 Kadambariraj Park, Chinchwad, Pune 411033, Maharashtra</div>
         <div><i class="fa-solid fa-phone"></i> +91 98508 98583</div>
     </div>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar with Shop Logo -->
     <nav>
         <div class="logo-area">
-            <div class="logo-icon"><i class="fa-solid fa-broom"></i></div>
+            <!-- Upload your logo file as logo.png in GitHub -->
+            <img src="logo.png" alt="Ganesh Agency Logo" class="logo-img">
             <div class="logo-text">
                 <h1>Ganesh Agency</h1>
-                <span>Wholesale Cleaning Supplies</span>
+                <span>Cleaning Material Supplier – Chinchwad</span>
             </div>
         </div>
         <div class="nav-links">
@@ -123,15 +119,16 @@
         </div>
     </nav>
 
-    <!-- Hero Header -->
-    <header>
-        <h2>Ganesh <span>Agency</span></h2>
-        <p>Your Trusted Wholesale Dealer & Supplier for Premium Quality Housekeeping and Industrial Cleaning Materials.</p>
-        <div class="hero-btns">
-            <a href="#products" class="btn btn-primary"><i class="fa-solid fa-boxes-stacked"></i> View Product Catalog</a>
-            <a href="https://www.instagram.com/ganesh.agency/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Visit Instagram</a>
+    <!-- Continuously Running Promotional Video Section -->
+    <div class="video-container">
+        <div class="video-wrapper">
+            <!-- Upload your promotional video as promo.mp4 in GitHub -->
+            <video autoplay muted loop playsinline>
+                <source src="promo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </header>
+    </div>
 
     <div class="container">
 
@@ -141,7 +138,7 @@
                 <h3>About Our Business</h3>
             </div>
             <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #475569; font-size: 1.1rem;">
-                Incepted in 2016[cite: 1], Ganesh Agency is a premier wholesale supplier, trader, and distributor of top-quality cleaning materials catering to homes, offices, industries, hospitals, hotels, schools, and commercial establishments. We guarantee competitive wholesale rates, premium durability, and prompt bulk deliveries.
+                Incepted in 2016[cite: 1], Ganesh Agency is a trusted wholesale dealer and distributor of premium cleaning materials, housekeeping essentials, liquids, brushes, mops, and commercial cleaning supplies in Chinchwad, Pune. We provide economical wholesale pricing for homes, offices, hotels, hospitals, and industries[cite: 1].
             </p>
         </div>
 
@@ -154,17 +151,17 @@
                 <div class="feature-card">
                     <i class="fa-solid fa-tags"></i>
                     <h4>Wholesale Prices</h4>
-                    <p>Designed specifically to offer maximum margins and bulk value for retailers, institutions, and businesses.</p>
+                    <p>Competitive pricing designed to offer the best margins for bulk buyers and retailers.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fa-solid fa-award"></i>
                     <h4>Premium Quality</h4>
-                    <p>Top-tier liquid cleaners, disinfectants, heavy-duty mops, and robust housekeeping tools built for deep cleaning.</p>
+                    <p>Top-tier chemicals, heavy-duty disinfectants, and durable housekeeping tools.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fa-solid fa-truck-fast"></i>
                     <h4>Fast & Reliable Service</h4>
-                    <p>Consistent bulk inventory readiness backed by smooth customer support and prompt dispatch.</p>
+                    <p>Consistent bulk stock readiness and prompt dispatch for all institutional orders.</p>
                 </div>
             </div>
         </div>
@@ -172,17 +169,17 @@
         <!-- Product Catalog Grid -->
         <div id="products">
             <div class="section-title">
-                <h3>Our Product Range</h3>
+                <h3>Our Complete Product Range</h3>
             </div>
             <div class="catalog-grid">
                 
                 <div class="product-card">
                     <div class="product-card-body">
-                        <h4>Floor Cleaners & Phenyl</h4>
-                        <p>High-grade white and colored floor cleaners, heavy disinfectants, and bulk liquid chemical containers.</p>
+                        <h4>Liquid Cleaners & Phenyl</h4>
+                        <p>Peacock Phynel, Gold Phynel, Sunny Phynel, Colour Phynels, Floor Cleaners, Toilet Liquids, Glass Cleaners, Dish Gel, Lizol, and Harpic.</p>
                     </div>
                     <div class="product-footer">
-                        <span class="tag">Bulk Available</span>
+                        <span class="tag">1L & 5L Packs</span>
                         <i class="fa-solid fa-spray-can-sparkles" style="color: var(--primary);"></i>
                     </div>
                 </div>
@@ -190,40 +187,40 @@
                 <div class="product-card">
                     <div class="product-card-body">
                         <h4>Mops & Floor Wipers</h4>
-                        <p>Cotton floor mops, modern squeeze mops, bucket mop sets, and heavy-duty rubber floor wiper heads.</p>
+                        <p>Mop with bucket, modern squeeze mops, cotton floor mops, wet/dry mop refills, and rubber floor wipers (Valvo, Walker, Nova).</p>
                     </div>
                     <div class="product-footer">
-                        <span class="tag">Multiple Sizes</span>
+                        <span class="tag">Heavy Duty</span>
                         <i class="fa-solid fa-hand-holding-droplet" style="color: var(--primary);"></i>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-card-body">
-                        <h4>Brooms & Brushes</h4>
-                        <p>Durable roof cleaning brooms, standard cleaning brooms, toilet brushes, and dustpan sets.</p>
+                        <h4>Brushes & Kharata</h4>
+                        <p>Basic brushes, handle brushes, tile brushes, curve brushes, wooden brushes, bottle brushes, iron brushes, plastic kharata, and hockey brushes.</p>
                     </div>
                     <div class="product-footer">
-                        <span class="tag">Heavy Duty</span>
+                        <span class="tag">Various Sizes</span>
                         <i class="fa-solid fa-broom" style="color: var(--primary);"></i>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-card-body">
-                        <h4>Kitchen & Cloth Dusters</h4>
-                        <p>Checkered kitchen dusters, yellow cleaning cloths, microfiber cloths, and utility wipes.</p>
+                        <h4>Dusters & Cloths</h4>
+                        <p>White dusters, white large dusters, microfiber towels, chex duster (small & large), rough dusters, and kitchen yellow dusters.</p>
                     </div>
                     <div class="product-footer">
-                        <span class="tag">Wholesale Packs</span>
+                        <span class="tag">Wholesale Bundles</span>
                         <i class="fa-solid fa-shirt" style="color: var(--primary);"></i>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-card-body">
-                        <h4>Plastic Buckets & Dustbins</h4>
-                        <p>Sturdy 5-liter and 10-liter plastic buckets, multi-purpose dustbins, and washing essentials.</p>
+                        <h4>Buckets & Dustbins</h4>
+                        <p>5-liter buckets, 10-liter blue buckets, plastic dustbins, and washing basins.</p>
                     </div>
                     <div class="product-footer">
                         <span class="tag">Commercial Grade</span>
@@ -233,11 +230,11 @@
 
                 <div class="product-card">
                     <div class="product-card-body">
-                        <h4>Tissues & Safety Essentials</h4>
-                        <p>Toilet paper rolls, garbage bags, protective rubber hand gloves, and hygiene consumables.</p>
+                        <h4>Housekeeping Accessories</h4>
+                        <p>Dambergoli, colour sanicubes, room freshners, aer pockets, plastic & steel clips, 4M rope, drain x powder, choke up liquid, bhaiyya cleaning powder, soap cases, and basin pipes.</p>
                     </div>
                     <div class="product-footer">
-                        <span class="tag">Institutional Supply</span>
+                        <span class="tag">Complete Range</span>
                         <i class="fa-solid fa-box-tissue" style="color: var(--primary);"></i>
                     </div>
                 </div>
@@ -278,10 +275,10 @@
         <div class="quote-section">
             <div class="quote-content">
                 <h4>Ready to Place a Bulk Order?</h4>
-                <p>Chat with us instantly on WhatsApp or visit our Instagram page for live shop updates.</p>
+                <p>Chat with us instantly on WhatsApp for quick wholesale quotes and delivery details.</p>
             </div>
             <div>
-                <a href="https://wa.me/919850898583?text=Hello%20Ganesh%20Agency,%20I%20would%20like%20a%20quote%20for%20cleaning%20materials." class="btn btn-primary" style="background: var(--success); font-size: 1.1rem;" target="_blank">
+                <a href="https://wa.me/919850898583?text=Hello%20Ganesh%20Agency,%20I%20would%20like%20a%20quote%20for%20cleaning%20materials." class="btn btn-primary" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                 </a>
             </div>

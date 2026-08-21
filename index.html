@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh Agency | Wholesale Cleaning Material Supplier</title>
     <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -14,79 +14,85 @@
             --primary-dark: #0369a1;
             --accent: #38bdf8;
             --dark: #0f172a;
-            --light: #f8fafc;
-            --success: #25d366;
+            --light: #f1f5f9;
+            --success: #10b981;
             --card-bg: #ffffff;
+            --gradient: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--light); color: var(--dark); line-height: 1.7; }
 
         /* Top Bar Info */
-        .top-bar { background: var(--dark); color: #cbd5e1; font-size: 0.85rem; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .top-bar a { color: var(--accent); text-decoration: none; }
+        .top-bar { background: var(--dark); color: #cbd5e1; font-size: 0.85rem; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid var(--primary); }
+        .top-bar span { display: inline-flex; align-items: center; gap: 6px; }
 
         /* Navigation Bar */
-        nav { background: white; padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo-area { display: flex; align-items: center; gap: 12px; }
-        .logo-img { height: 50px; width: auto; border-radius: 50%; }
-        .logo-text h1 { font-size: 1.3rem; color: var(--dark); line-height: 1.2; }
-        .logo-text span { font-size: 0.75rem; color: #64748b; font-weight: 400; }
-        .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
+        nav { background: white; padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
+        .logo-area { display: flex; align-items: center; gap: 14px; }
+        .logo-img { height: 55px; width: 55px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary); }
+        .logo-text h1 { font-size: 1.4rem; color: var(--dark); font-weight: 700; line-height: 1.2; }
+        .logo-text span { font-size: 0.8rem; color: #64748b; font-weight: 500; }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
-        .nav-btn { background: var(--success); color: white !important; padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px; }
+        .nav-btn { background: var(--success); color: white !important; padding: 10px 20px; border-radius: 30px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
 
         /* Video Header Section */
-        .video-container { background: var(--dark); padding: 2rem 1rem; text-align: center; }
-        .video-wrapper { max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 3px solid var(--accent); }
+        .video-container { background: linear-gradient(135deg, #0f172a, #1e293b); padding: 3rem 1rem; text-align: center; }
+        .video-wrapper { max-width: 900px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border: 4px solid var(--accent); background: #000; }
         .video-wrapper video { width: 100%; display: block; }
 
         /* Main Container */
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
 
         /* Section Headings */
         .section-title { text-align: center; margin-bottom: 3rem; }
-        .section-title h3 { font-size: 2rem; color: var(--dark); position: relative; display: inline-block; padding-bottom: 10px; }
-        .section-title h3::after { content: ''; position: absolute; width: 50px; height: 3px; background: var(--primary); bottom: 0; left: 50%; transform: translateX(-50%); border-radius: 3px; }
+        .section-title h3 { font-size: 2.3rem; color: var(--dark); font-weight: 800; position: relative; display: inline-block; padding-bottom: 12px; }
+        .section-title h3::after { content: ''; position: absolute; width: 70px; height: 4px; background: var(--gradient); bottom: 0; left: 50%; transform: translateX(-50%); border-radius: 4px; }
 
         /* Features Grid */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .feature-card { background: var(--card-bg); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; transition: 0.3s; text-align: center; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-color: var(--accent); }
-        .feature-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; background: #e0f2fe; padding: 15px; border-radius: 50%; }
-        .feature-card h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--dark); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .feature-card { background: var(--card-bg); padding: 35px 25px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: 0.3s; text-align: center; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(2, 132, 199, 0.1); border-color: var(--primary); }
+        .feature-card i { font-size: 2.8rem; color: white; background: var(--gradient); padding: 20px; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3); }
+        .feature-card h4 { font-size: 1.3rem; margin-bottom: 12px; color: var(--dark); font-weight: 700; }
         .feature-card p { color: #64748b; font-size: 0.95rem; }
 
-        /* Catalog Product Grid */
-        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 20px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); }
-        .product-card-body { padding: 20px; }
-        .product-card h4 { color: var(--dark); font-size: 1.1rem; margin-bottom: 8px; }
-        .product-card p { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
-        .product-footer { background: #f8fafc; padding: 12px 20px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-        .tag { background: #e0f2fe; color: var(--primary-dark); font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+        /* Catalog Image Showcases */
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 20px; }
+        .catalog-card { background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.04); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+        .catalog-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .catalog-img { width: 100%; height: 260px; object-fit: cover; border-bottom: 3px solid var(--primary); }
+        .catalog-body { padding: 25px; }
+        .catalog-body h4 { color: var(--dark); font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; }
+        .catalog-body p { color: #64748b; font-size: 0.95rem; }
+
+        /* Gallery Shop Images Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-top: 30px; }
+        .gallery-item { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 3px solid white; transition: 0.3s; }
+        .gallery-item:hover { transform: scale(1.02); }
+        .gallery-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
 
         /* Contact Details Section */
-        .contact-box { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); margin-top: 50px; border: 1px solid #e2e8f0; text-align: center; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 30px; text-align: left; }
-        .contact-card { background: var(--light); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border-left: 4px solid var(--primary); }
-        .contact-card i { font-size: 1.8rem; color: var(--primary); }
-        .contact-card p { font-size: 0.85rem; color: #64748b; margin: 0; }
-        .contact-card h5 { font-size: 1rem; color: var(--dark); margin: 0; word-break: break-all; }
+        .contact-box { background: white; padding: 45px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 60px; border: 1px solid #e2e8f0; text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; text-align: left; }
+        .contact-card { background: var(--light); padding: 22px; border-radius: 12px; display: flex; align-items: center; gap: 15px; border-left: 5px solid var(--primary); transition: 0.3s; }
+        .contact-card:hover { background: #e0f2fe; }
+        .contact-card i { font-size: 2rem; color: var(--primary); }
+        .contact-card p { font-size: 0.85rem; color: #64748b; margin: 0; font-weight: 500; }
+        .contact-card h5 { font-size: 1.05rem; color: var(--dark); margin: 0; font-weight: 700; word-break: break-all; }
 
         /* Call to Action Banner */
-        .quote-section { background: linear-gradient(135deg, #e0f2fe, #bae6fd); padding: 40px; border-radius: 16px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .quote-content h4 { font-size: 1.8rem; color: #0369a1; margin-bottom: 10px; }
-        .quote-content p { color: #334155; }
-        .btn { padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary { background: var(--success); color: white; }
-        .btn-primary:hover { background: #20ba5a; transform: translateY(-2px); }
+        .quote-section { background: var(--gradient); padding: 45px; border-radius: 20px; margin-top: 50px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 25px; box-shadow: 0 15px 30px rgba(2, 132, 199, 0.3); color: white; }
+        .quote-content h4 { font-size: 2rem; margin-bottom: 8px; font-weight: 800; }
+        .quote-content p { color: #e0f2fe; font-size: 1.05rem; }
+        .btn-whatsapp { background: var(--success); color: white; padding: 14px 32px; border-radius: 35px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: 0.3s; }
+        .btn-whatsapp:hover { background: #059669; transform: translateY(-3px); }
 
         /* Footer */
-        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 30px 20px; margin-top: 60px; }
-        footer p { font-size: 0.9rem; }
+        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 35px 20px; margin-top: 60px; border-top: 4px solid var(--primary); }
+        footer p { font-size: 0.95rem; }
 
         @media(max-width: 768px) {
             .nav-links { display: none; }
@@ -97,14 +103,13 @@
 
     <!-- Top Notice Bar -->
     <div class="top-bar">
-        <div><i class="fa-solid fa-location-dot"></i> 3 Kadambariraj Park, Chinchwad, Pune 411033, Maharashtra</div>
-        <div><i class="fa-solid fa-phone"></i> +91 98508 98583</div>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> 3 Kadambariraj Park, Chinchwad, Pune 411033, Maharashtra</span>
+        <span><i class="fa-solid fa-phone" style="color: var(--accent);"></i> +91 98508 98583</span>
     </div>
 
     <!-- Navigation Bar with Shop Logo -->
     <nav>
         <div class="logo-area">
-            <!-- Upload your logo file as logo.png in GitHub -->
             <img src="logo.png" alt="Ganesh Agency Logo" class="logo-img">
             <div class="logo-text">
                 <h1>Ganesh Agency</h1>
@@ -114,6 +119,7 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
             <a href="https://wa.me/919850898583?text=Hi%20Ganesh%20Agency,%20I%20want%20to%20place%20a%20wholesale%20order." class="nav-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
         </div>
@@ -122,7 +128,6 @@
     <!-- Continuously Running Promotional Video Section -->
     <div class="video-container">
         <div class="video-wrapper">
-            <!-- Upload your promotional video as promo.mp4 in GitHub -->
             <video autoplay muted loop playsinline>
                 <source src="promo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -137,7 +142,7 @@
             <div class="section-title">
                 <h3>About Our Business</h3>
             </div>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #475569; font-size: 1.1rem;">
+            <p style="text-align: center; max-width: 850px; margin: 0 auto; color: #334155; font-size: 1.15rem; font-weight: 400;">
                 Incepted in 2016[cite: 1], Ganesh Agency is a trusted wholesale dealer and distributor of premium cleaning materials, housekeeping essentials, liquids, brushes, mops, and commercial cleaning supplies in Chinchwad, Pune. We provide economical wholesale pricing for homes, offices, hotels, hospitals, and industries[cite: 1].
             </p>
         </div>
@@ -166,86 +171,62 @@
             </div>
         </div>
 
-        <!-- Product Catalog Grid -->
+        <!-- Product Catalogs Showcase (Using your uploaded catalog images) -->
         <div id="products">
             <div class="section-title">
-                <h3>Our Complete Product Range</h3>
+                <h3>Our Official Product Catalogs</h3>
             </div>
             <div class="catalog-grid">
                 
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Liquid Cleaners & Phenyl</h4>
-                        <p>Peacock Phynel, Gold Phynel, Sunny Phynel, Colour Phynels, Floor Cleaners, Toilet Liquids, Glass Cleaners, Dish Gel, Lizol, and Harpic.</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">1L & 5L Packs</span>
-                        <i class="fa-solid fa-spray-can-sparkles" style="color: var(--primary);"></i>
+                <div class="catalog-card">
+                    <img src="pg1.jpg" alt="Housekeeping & Dusters Catalog" class="catalog-img">
+                    <div class="catalog-body">
+                        <h4>Housekeeping & Accessories</h4>
+                        <p>Complete range of dusters, microfiber cloths, clips, room freshners, sanicubes, ropes, drain powders, and basin pipes.</p>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Mops & Floor Wipers</h4>
-                        <p>Mop with bucket, modern squeeze mops, cotton floor mops, wet/dry mop refills, and rubber floor wipers (Valvo, Walker, Nova).</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">Heavy Duty</span>
-                        <i class="fa-solid fa-hand-holding-droplet" style="color: var(--primary);"></i>
+                <div class="catalog-card">
+                    <img src="pg3.jpg" alt="Brushes & Kharata Catalog" class="catalog-img">
+                    <div class="catalog-body">
+                        <h4>Brushes & Kharata Range</h4>
+                        <p>Basic brushes, handle brushes, tile brushes, wooden line brushes, cap brushes, bottle brushes, plastic kharata, and hockey brushes.</p>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Brushes & Kharata</h4>
-                        <p>Basic brushes, handle brushes, tile brushes, curve brushes, wooden brushes, bottle brushes, iron brushes, plastic kharata, and hockey brushes.</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">Various Sizes</span>
-                        <i class="fa-solid fa-broom" style="color: var(--primary);"></i>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Dusters & Cloths</h4>
-                        <p>White dusters, white large dusters, microfiber towels, chex duster (small & large), rough dusters, and kitchen yellow dusters.</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">Wholesale Bundles</span>
-                        <i class="fa-solid fa-shirt" style="color: var(--primary);"></i>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Buckets & Dustbins</h4>
-                        <p>5-liter buckets, 10-liter blue buckets, plastic dustbins, and washing basins.</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">Commercial Grade</span>
-                        <i class="fa-solid fa-bucket" style="color: var(--primary);"></i>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-card-body">
-                        <h4>Housekeeping Accessories</h4>
-                        <p>Dambergoli, colour sanicubes, room freshners, aer pockets, plastic & steel clips, 4M rope, drain x powder, choke up liquid, bhaiyya cleaning powder, soap cases, and basin pipes.</p>
-                    </div>
-                    <div class="product-footer">
-                        <span class="tag">Complete Range</span>
-                        <i class="fa-solid fa-box-tissue" style="color: var(--primary);"></i>
+                <div class="catalog-card">
+                    <img src="pg4.jpg" alt="Liquid Cleaners Catalog" class="catalog-img">
+                    <div class="catalog-body">
+                        <h4>Liquid Cleaners & Chemicals</h4>
+                        <p>Peacock Phynel, Gold Phynel, Sunny Phynel, floor cleaners, handwash, toilet liquids, glass cleaners, dish gel, Lizol, Harpic, and HIT spray.</p>
                     </div>
                 </div>
 
             </div>
         </div>
 
+        <!-- Shop Gallery Showcase (Using your shop and store images) -->
+        <div id="gallery" style="margin-top: 70px;">
+            <div class="section-title">
+                <h3>Our Shop & Inventory Gallery</h3>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="shop-front.jpg" alt="Ganesh Agency Shop Front">
+                </div>
+                <div class="gallery-item">
+                    <img src="shop.jpg" alt="Shop Interior Shelves">
+                </div>
+                <div class="gallery-item">
+                    <img src="shop1.jpg" alt="Wholesale Cleaning Stock">
+                </div>
+            </div>
+        </div>
+
         <!-- Contact Information Section -->
         <div id="contact" class="contact-box">
-            <h3 style="color: var(--dark); font-size: 1.8rem; margin-bottom: 10px;">Get in Touch With Us</h3>
-            <p style="color: #64748b;">Reach out directly for bulk catalogs, dealer pricing, and business orders.</p>
+            <h3 style="color: var(--dark); font-size: 2rem; margin-bottom: 10px; font-weight: 800;">Get in Touch With Us</h3>
+            <p style="color: #64748b; font-size: 1.05rem;">Reach out directly for bulk catalogs, dealer pricing, and business orders.</p>
             <div class="contact-grid">
                 <div class="contact-card">
                     <i class="fa-solid fa-phone-volume"></i>
@@ -278,8 +259,8 @@
                 <p>Chat with us instantly on WhatsApp for quick wholesale quotes and delivery details.</p>
             </div>
             <div>
-                <a href="https://wa.me/919850898583?text=Hello%20Ganesh%20Agency,%20I%20would%20like%20a%20quote%20for%20cleaning%20materials." class="btn btn-primary" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                <a href="https://wa.me/919850898583?text=Hello%20Ganesh%20Agency,%20I%20would%20like%20a%20quote%20for%20cleaning%20materials." class="btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> Chat on WhatsApp
                 </a>
             </div>
         </div>
